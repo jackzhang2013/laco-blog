@@ -1,0 +1,101 @@
+body {
+    background-image: url("https://cdn.luogu.com.cn/upload/image_hosting/7ql9nxar.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#content {
+    padding: 3em 1em;
+    font-size: 120%;
+    left: 20%;
+    top: 0%;
+    background-color: #FFFFFF90;
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    border-style: none solid;
+    border-width: 0.2em;
+    border-color: #EEEEEE;
+}
+@font-face {
+    font-family: font_1;
+    src: url("JetBrainsMono-SemiBold.ttf")；
+}
+pre {
+    font-family: font_1 !important;
+    box-shadow: 0 !important;
+}
+code {
+    text-shadow: 0 0 BLACK !important;
+}
+.toolbar-item button {
+    background: #00000000 !important;
+    box-shadow: 0 0 0 0 #00000000 !important;
+}
+#top {
+    z-index: 2;
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    background-color: #baf1fe;
+    height: 5%;
+    width: 100%;
+    border-style: none none solid none;
+    border-width: 0.2em;
+    border-color: #FFFFFF;
+}
+#logo {
+    position: absolute;
+    z-index: 3;
+    top: 15%;
+    left: 2%;
+    height: 100%;
+    width: 100%;
+}
+#text {
+    position: absolute;
+    z-index: 3;
+    top: 15%;
+    left: 22%;
+    height: 100%;
+    width: 100%;
+}
+#input {
+    position: absolute;
+    z-index: 100;
+    top: 15%;
+    left: 80%;
+    height: 55%;
+    width: 100%;
+}
+#input input {
+    padding: 0% 2%;
+    position: absolute;
+    left: 0%;
+    height: 100%;
+    width: 13%;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 0.2em;
+    border-color: #42BDFF;
+    background-color: #A9D9FB;
+    color:#000000;
+    font-size: 1em;
+}
+#input img {
+    left: 0.5%;
+    z-index: 101;
+    position: absolute;
+    top: 20%;
+}
+a {
+    color: #555555;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+a:not(:last-child) {
+    margin-right: 4%;
+}
+#logo-text {
+    color: #42BDFF;
+}

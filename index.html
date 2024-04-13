@@ -1,19 +1,30 @@
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
+        <link rel="shortcut icon" href="https://geek-docs.com/favicon.ico" type="image/x-icon">
         <title>jackzhang的博客</title>
         <link rel="stylesheet" href="style.css">
         <script src="index.js"></script>
     </head>
     <body>
+        <div id="top">
+            <div id="logo">
+                <a href="index.html" id="logo-text">jackzhang's blog</a>
+            </div>
+            <div id="text">
+                <a href="index.html" id="link1" onmouseover="overfunctioninput('link1')" onmouseout="outfunctioninput('link1')">首页</a>
+                <a href="index.html" id="link2" onmouseover="overfunctioninput('link2')" onmouseout="outfunctioninput('link2')">文章</a>
+            </div>
+            <div id="input">
+                <img id="input-button" src="https://ts1.cn.mm.bing.net/th/id/R-C.756285576f9fda6ed56dd804005ca45e?rik=a1N7kzQlgrL4pw&riu=http%3a%2f%2fres.dps.cn%2fres%2fdecoration%2ffree302021042520766%2fthn%2f5ba65c6949c19f2e158e3dae2b07c08b.png%3fx-oss-process%3dimage%2fresize%2cl_600%2fsharpen%2c100&ehk=9ObDdf5c%2bFlaH127ITQZJfeal5IPkeT5onaqlpdTOCM%3d&risl=&pid=ImgRaw&r=0" height="90%" onclick="clickfunctioninput()">
+                <input id="input-text" type="text" name="lname"><br>
+            </div>
+        </div>
         <div id="content">
             <h1>jackzhang的博客</h1>
-            <div id="frame1" onmouseover="overfunction1()" onmouseout="outfunction1()">
+            <div href="文章1.html" id="frame1" onmouseover="overfunction('frame1')" onmouseout="outfunction('frame1')" onclick="clickfunction('文章1.html')">
                 <p>文章1</p>
-            </div>
-            <div id="frame2" onmouseover="overfunction2()" onmouseout="outfunction2()">
-                <p>文章2</p>
-            </div>
             </div>
         </div>
     </body>
