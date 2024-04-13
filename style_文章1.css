@@ -5,13 +5,13 @@ body {
     background-size: cover;
 }
 #content {
-    padding: 3em 1em;
+    padding: 1em 1em;
     font-size: 120%;
     left: 20%;
-    top: 0%;
+    top: 7%;
     background-color: #FFFFFF90;
-    height: 100%;
-    width: 60%;
+    height: calc(93% - 2em);
+    width: calc(60% - 2em);
     position: absolute;
     border-style: none solid;
     border-width: 0.2em;
@@ -37,56 +37,29 @@ code {
     top: 0%;
     left: 0%;
     position: fixed;
-    background-color: #baf1fe;
-    height: 5%;
+    background-color: #FFFFFF;
+    height: 7%;
     width: 100%;
     border-style: none none solid none;
     border-width: 0.2em;
-    border-color: #FFFFFF;
+    border-color: #EEEEEE;
 }
 #logo {
     position: absolute;
     z-index: 3;
-    top: 15%;
-    left: 2%;
+    top: 20%;
+    left: 21%;
     height: 100%;
     width: 100%;
 }
 #text {
+    margin: auto;
     position: absolute;
     z-index: 3;
-    top: 15%;
-    left: 22%;
-    height: 100%;
-    width: 100%;
-}
-#input {
-    position: absolute;
-    z-index: 100;
-    top: 15%;
-    left: 80%;
-    height: 55%;
-    width: 100%;
-}
-#input input {
-    padding: 0% 2%;
-    position: absolute;
-    left: 0%;
-    height: 100%;
-    width: 13%;
-    border-radius: 0.5em;
-    border-style: solid;
-    border-width: 0.2em;
-    border-color: #42BDFF;
-    background-color: #A9D9FB;
-    color:#000000;
-    font-size: 1em;
-}
-#input img {
-    left: 0.5%;
-    z-index: 101;
-    position: absolute;
     top: 20%;
+    left: 70%;
+    height: 100%;
+    width: 100%;
 }
 a {
     color: #555555;
