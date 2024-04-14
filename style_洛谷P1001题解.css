@@ -3,8 +3,9 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    overflow: auto;
 }
-#content {
+#background {
     padding: 1em 1em;
     font-size: 120%;
     left: 20%;
@@ -12,10 +13,30 @@ body {
     background-color: #FFFFFF90;
     height: calc(93% - 2em);
     width: calc(60% - 2em);
-    position: absolute;
+    position: fixed;
     border-style: none solid;
     border-width: 0.2em;
     border-color: #EEEEEE;
+}
+#content {
+    overflow: hidden;
+    padding: 1em 1em;
+    font-size: 120%;
+    left: 20%;
+    top: 7%;
+    background-color: #FFFFFF00;
+    height: calc(93% - 2em);
+    width: calc(60% - 2em);
+    position: sticky;
+    border-style: none solid;
+    border-width: 0.2em;
+    border-color: #FFFFFF00;
+}
+#lv-container {
+    top: 100%;
+    width: 55%;
+    left: 22.5%;
+    position: absolute;
 }
 @font-face {
     font-family: font_1;
