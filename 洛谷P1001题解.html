@@ -3,9 +3,10 @@
         <meta charset="utf-8">
         <title>文章1</title>
         <link rel="shortcut icon" href="https://geek-docs.com/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="style_文章1.css">
-        <script src="index_文章1.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML" async></script>
+        <link rel="stylesheet" href="style_洛谷P1001题解.css">
+        <script src="index_洛谷P1001题解.js"></script>
+        <script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <link rel="dns-prefetch" href="//cdn.bootcss.com" />
         <script src="https://cdn.bootcdn.net/ajax/libs/marked/2.0.3/marked.js"></script>
         <script src="prism.js"></script>
         <link href="prism.css" rel="stylesheet">
@@ -22,14 +23,39 @@
         </div>
         <div id="content">
         </div>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: {
+                    inlineMath:  [ ["$", "$"] ],
+                    displayMath: [ ["$$","$$"] ],
+                    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'],
+                }
+            });
+        </script>
         <script>
-            content = "\n\
-```python\n\
-s = \"Python syntax highlighting\"\n\
-print s\n\
-```\n\
-$$aaa$$\
-"
+            content = `
+# 洛谷P1001题解
+首先，先要把c++的框架写完：
+\`\`\`cpp
+#include < iostream >
+//引入iostream头文件
+using namespace std;
+//包含std命名空间
+int main()
+{
+    //code
+    return 0;
+    //退出
+}
+//定义主函数
+\`\`\`
+随后，就可以开始写$a+b$了
+\`\`\`cpp
+int a, b//定义a, b
+cin >> a >> b;//输入a, b
+cout << a + b;//输出a + b
+\`\`\`
+提交，AC`
             document.getElementById("content").innerHTML = marked(content);
         </script>
         <script>
