@@ -18,14 +18,25 @@ body {
     border-width: 0.2em;
     border-color: #EEEEEE;
 }
+#head {
+    position: absolute;
+    font-size: 120%;
+    left: 20%;
+    top: 7%;
+    width: 60%;
+    height: 20%;
+    text-align: center;
+    overflow: hidden;
+}
 #content {
     overflow: hidden;
     padding: 1em 1em;
     font-size: 120%;
     left: 20%;
-    top: 7%;
+    top: 30%;
+    padding-top: 10em;
     background-color: #FFFFFF00;
-    height: calc(93% - 2em);
+    height: calc(83% - 2em);
     width: calc(60% - 2em);
     position: sticky;
     border-style: none solid;
@@ -40,7 +51,7 @@ body {
 }
 @font-face {
     font-family: font_1;
-    src: url("JetBrainsMono-SemiBold.ttf")；
+    src: url("JetBrainsMono-SemiBold.ttf");
 }
 pre {
     font-family: font_1 !important;
