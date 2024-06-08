@@ -1,5 +1,6 @@
 body {
-    background-image: url("https://cdn.luogu.com.cn/upload/image_hosting/7ql9nxar.png");
+    /*background-image: url("https://cdn.luogu.com.cn/upload/image_hosting/7ql9nxar.png");*/
+    background-color: #EEEEEE;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
