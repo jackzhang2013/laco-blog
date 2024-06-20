@@ -3995,7 +3995,7 @@
             
         if (settings.previewCodeHighlight) 
         {
-            div.find("pre").addClass("prettyprint linenums");
+            div.find("pre").addClass("prettyprint");
             prettyPrint();
         }
         

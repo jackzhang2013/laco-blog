@@ -53,10 +53,6 @@ span.katex {
     left: 22.5%;
     position: absolute;
 }
-@font-face {
-    font-family: font_1;
-    src: url("JetBrainsMono-SemiBold.ttf");
-}
 #top {
     z-index: 2;
     top: 0%;
