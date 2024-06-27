@@ -10,7 +10,7 @@ body {
     padding: 1em 1em;
     font-size: 120%;
     left: 20%;
-    top: 7%;
+    top: 60px;
     background-color: #FFFFFF90;
     height: calc(93% - 2em);
     width: calc(60% - 2em);
@@ -18,12 +18,13 @@ body {
     border-style: none solid;
     border-width: 0.2em;
     border-color: #EEEEEE;
+    z-index: -1;
 }
 #head {
     position: absolute;
     font-size: 120%;
     left: 20%;
-    top: 7%;
+    top: 60px;
     width: 60%;
     height: 20%;
     text-align: center;
@@ -37,7 +38,6 @@ body {
     top: 30%;
     padding-top: 10em;
     background-color: #FFFFFF00;
-    height: calc(83% - 2em);
     width: calc(60% - 2em);
     position: sticky;
     border-style: none solid;
@@ -54,12 +54,13 @@ span.katex {
     position: absolute;
 }
 #top {
+    box-shadow: 0px 5px 5px #DDDDDD;
     z-index: 2;
     top: 0%;
     left: 0%;
     position: fixed;
     background-color: #FFFFFF;
-    height: 7%;
+    height: 60px;
     width: 100%;
     border-style: none none solid none;
     border-width: 0.2em;
@@ -69,18 +70,17 @@ span.katex {
     position: absolute;
     z-index: 3;
     top: 20%;
-    left: 21%;
+    left: 20%;
     height: 100%;
-    width: 100%;
 }
 #text {
     margin: auto;
     position: absolute;
     z-index: 3;
     top: 20%;
-    left: 70%;
+    left: calc(80% - 9em);
     height: 100%;
-    width: 100%;
+    width: 10em;
 }
 a {
     color: #555555;
@@ -88,8 +88,55 @@ a {
     font-size: 1.5em;
 }
 a:not(:last-child) {
-    margin-right: 4%;
+    margin-right: 2em;
 }
 #logo-text {
     color: #42BDFF;
+}
+
+/* for block of numbers */
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-align: center;
+    color: #ccc;
+    border-right: 1px solid #CCC;
+    vertical-align: top;
+    padding-right: 10px !important;
+
+    /* your custom style here */
+}
+
+/* for block of code */
+.hljs-ln-code {
+    padding-left: 10px !important;
+}
+.dark {
+    background-color: #000000;
+}
+.dark #background {
+    background-color: #222222;
+    border-color: #666666;
+}
+.dark #top {
+    box-shadow: 0px 0px 0px #777777;
+    background-color: #222222;
+    border-color: #666666;
+}
+.dark p {
+    color: #FFFFFF;
+}
+.dark h1 {
+    color: #FFFFFF !important;
+}
+.dark a {
+    color: #FFFFFF;
+}
+.dark #head span {
+    color: #FFFFFF !important;
 }

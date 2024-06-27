@@ -3,11 +3,13 @@
         <meta charset="utf-8">
         <title>404</title>
         <link rel="shortcut icon" href="https://geek-docs.com/favicon.ico" type="image/x-icon">
+        <script src="js/vue.min.js"></script>
+        <script src="js/jquery.min.js"></script>
     </head>
     <body>
         <div id="text">
             <h1>404 not found</h1>
-            <a href="https://jackzhang2013.github.io"> jackzhang的博客 </a>
+            <a href="/index.html" id="index"> {{ name }}的博客 </a>
         </div>
         <style>
             #text h1 {
@@ -24,5 +26,19 @@
                 text-decoration: none;
             }
         </style>
+        <script>
+            $.getJSON("/config.json", function(data) {
+                dataname = data.name;
+                postcount = data.post.count;
+                postnamelist = data.post.name;
+
+                new Vue({
+                    el: "#index",
+                    data: {
+                        name: dataname,
+                    },
+                });
+            });
+        </script>
     </body>
 </html>
