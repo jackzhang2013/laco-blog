@@ -2,22 +2,22 @@
 <html lang="zh-cn">
     <head>
         <meta charset="utf-8">
-        <title>洛谷P1001题解</title>
+        <title id="title">{{ post_name }}</title>
         <link rel="shortcut icon" href="https://geek-docs.com/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="/css/post.css">
         <link rel="stylesheet" href="/editor.md-master/css/editormd.preview.css"/>
         <link href="/copy-tex/copy-tex.css" rel="stylesheet">
         <script src="/copy-tex/copy-tex.js"></script>
-        <script src="/js/vue.min.js"></script>
+        <script src="/js/vue.global.prod.js"></script>
     </head>
     <body class="light">
         <div id="top">
             <div id="logo">
-                <a href="/index.html" id="logo-text">{{ name }}'s blog</a>
+                <a href="/index.html" id="logo-text" target="_blank">{{ name }}'s blog</a>
             </div>
             <div id="text">
-                <a href="/index.html" id="link1">首页</a>
-                <a href="/index.html" id="link2">文章</a>
+                <a href="/index.html" id="link1" target="_blank">首页</a>
+                <a href="/index.html" id="link2" target="_blank">文章</a>
             </div>
             <a id="github" href="https://github.com/jackzhang2013" target="_blank">
                 <img src="/svg/github-mark-white.svg" alt="github" id="github-icon">
@@ -37,11 +37,22 @@
                     width: 30px;
                 }
             </style>
+            <img src="/svg/moon-outline.svg" alt="theme" id="moon-sun" onclick="switchtheme()">
+            <style>
+                #moon-sun {
+                    margin-top: 15px;
+                    margin-right: 15px;
+                    height: 30px;
+                    width: 30px;
+                    float: right;
+                    padding: 0;
+                }
+            </style>
         </div>
         <div id="background">
         </div>
         <div id="head">
-            <h1>洛谷P1001题解</h1>
+            <h1 id="post-name">{{ post_name }}</h1>
             <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
             <span class="fa fa-spinner fa-spin">浏览量：</span><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span><span class="fa fa-spinner fa-spin"> | 访客数：</span><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span>
         </div>
@@ -69,7 +80,9 @@
         <link rel="stylesheet" href="/highlightjs-copy/highlightjs-copy.min.css"/>
 
         <script type="text/javascript">
-            $.get("/md/洛谷P1001题解.md", function(markdown) {
+            const search_params = new URLSearchParams(window.location.search);
+            var post_name = search_params.get('name');
+            $.get(`/md/${post_name}.md`, function(markdown) {
                 testEditormdView = editormd.markdownToHTML("content", {
                     markdown            : markdown ,//+ "\r\n" + $("#append-test").text(),
                     htmlDecode          : "style,script,iframe",  // you can filter tags decode

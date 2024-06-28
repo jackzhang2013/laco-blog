@@ -1,6 +1,7 @@
 {
     "name":"jackzhang",
     "theme":"light",
+    "auto_dark":false,
     "post":
     {
         "count":1,

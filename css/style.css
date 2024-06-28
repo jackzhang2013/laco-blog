@@ -67,16 +67,17 @@ h1 {
     position: absolute;
     top: 15%;
     left: 10%;
+    right: 10%;
     width: 80%;
 }
 .postcard {
     background-color: #FFFFFF50;
     border: 0.2em solid #EEEEEE;
     border-radius: 0.5em;
-    height: calc(15em - 4em);
-    width: calc(100% - 4em);
+    height: calc(15em - 80px);
+    width: calc(100% - 80px);
     position: absolute;
-    padding: 3em;
+    padding: 40px;
 }
 p {
     font-size: 2em;

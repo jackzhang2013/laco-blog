@@ -1,10 +1,10 @@
 function overfunction(element_name) {
-    element = document.getElementById(element_name);
+    var element = document.getElementById(element_name);
     element.style["box-shadow"] = "0px 15px 10px -15px #DDDDDD";
 }
 
 function outfunction(element_name) {
-    element = document.getElementById(element_name);
+    var element = document.getElementById(element_name);
     element.style["box-shadow"] = "0px 0px 0px 0px #DDDDDD";
 }
 
@@ -12,37 +12,90 @@ function clickfunction(name) {
     window.open(name, "_blank");
 }
 
-function clickfunctioninput() {
-    val = document.getElementById("input-text");
-    alert("值是" + val.value);
-}
-
-function enterfunction(e) {
-    theEvent = e;
-    keyCode = theEvent.keyCode || theEvent.which || theEvent.charCode;
-    if (keyCode == 13) {
-        val = document.getElementById("input-text");
-        alert("值是" + val.value);
-    }
-}
-
-$(document).ready(function () {
-    if ($("body").attr("class") == "dark") {
-        $("#github-icon").attr("src", "/svg/github-mark-white.svg");
-    } else {
-        $("#github-icon").attr("src", "/svg/github-mark.svg")
-    }
-});
-
 $.getJSON("/config.json", function(data) {
-    dataname = data.name;
-    postcount = data.post.count;
-    postnamelist = data.post.name;
+    var data_name = data.name;
+    var theme = data.theme;
+    var auto = data.auto_dark;
+    const search_params = new URLSearchParams(window.location.search);
+    var post_name = search_params.get('name');
 
-    new Vue({
-        el: "#logo-text",
-        data: {
-            name: dataname,
-        },
+    const VueApp = {
+        data() {
+            return {
+                name: data_name
+            }
+        }
+    }
+    
+    Vue.createApp(VueApp).mount('#logo-text')
+
+    const PostName = {
+        data() {
+            return {
+                post_name: post_name
+            }
+        }
+    }
+    
+    Vue.createApp(PostName).mount('#title')
+    Vue.createApp(PostName).mount('#post-name')
+
+    var storage = window.localStorage;
+    if(auto)
+    {
+        const is_dark = window.matchMedia("(prefers-color-scheme: dark)");
+        if(is_dark)
+        {
+            theme = "dark";
+        }
+        else
+        {
+            theme = "light";
+        }
+    }
+    if(storage.theme)
+    {
+        theme = storage.theme;
+    }
+    $("body").attr("class", theme);
+
+    $(document).ready(function () {
+        if(theme == "dark")
+        {
+            $("#github-icon").attr("src", "/svg/github-mark-white.svg");
+            $("#moon-sun").attr("src", "/svg/sun-outline.svg");
+        }
+        else
+        {
+            $("#github-icon").attr("src", "/svg/github-mark.svg")
+            $("#moon-sun").attr("src", "/svg/moon-outline.svg");
+        }
     });
 });
+
+function switchtheme()
+{
+    var theme = $("body").attr("class");
+    if(theme == "dark")
+    {
+        theme = "light";
+    }
+    else
+    {
+        theme = "dark";
+    }
+    var storage = window.localStorage;
+    storage.theme = theme;
+    console.log(theme);
+    $("body").attr("class", theme);
+    if(theme == "dark")
+    {
+        $("#github-icon").attr("src", "/svg/github-mark-white.svg");
+        $("#moon-sun").attr("src", "/svg/sun-outline.svg");
+    }
+    else
+    {
+        $("#github-icon").attr("src", "/svg/github-mark.svg")
+        $("#moon-sun").attr("src", "/svg/moon-outline.svg");
+    }
+}
