@@ -1,4 +1,4 @@
-<center>
+<div align="center">
 
 # laco blog
 
@@ -8,8 +8,6 @@
 
 ![](https://stats.deeptrain.net/repo/jackzhang2013/temp/?theme=dark)
 
-</center>
-
 <a href="https://star-history.com/#jackzhang2013/temp&Date">
  <picture>
    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=jackzhang2013/temp&type=Date&theme=dark" />
@@ -17,6 +15,8 @@
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=jackzhang2013/temp&type=Date" />
  </picture>
 </a>
+
+</div>
 
 ### 依赖项目
 
