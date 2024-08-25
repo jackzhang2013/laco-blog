@@ -1,10 +1,7 @@
 {
     "name":"jackzhang",
     "theme":"light",
-    "auto_dark":false,
-    "post":
-    {
-        "count":1,
-        "name":["洛谷P1001题解"]
-    }
+    "auto_dark":true,
+    "code_theme":["github", "github-dark"],
+    "post_name":["洛谷P1001题解", "html"]
 }

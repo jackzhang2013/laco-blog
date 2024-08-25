@@ -23,8 +23,7 @@ function clickfunctioninput()
 
 $.getJSON("/config.json", function(data) {
     var dataname = data.name;
-    var postcount = data.post.count;
-    var postnamelist = data.post.name;
+    var postnamelist = data.post_name;
     var theme = data.theme;
     var auto = data.auto_dark;
 
@@ -39,14 +38,15 @@ $.getJSON("/config.json", function(data) {
     Vue.createApp(VueApp).mount('#title')
     Vue.createApp(VueApp).mount('#name')
     Vue.createApp(VueApp).mount('#logo')
-
-    for(var index = 0; index < postcount; index++) {
+    var top = 0;
+    for(var index = 0; index < postnamelist.length; index++) {
         var postname = postnamelist[index];
         template = `
-        <div id="post${index}" class="postcard" onmouseover="overfunction('post${index}')" onmouseout="outfunction('post${index}')" onclick="clickfunction('post/index.html?name=${postname}')">
+        <div id="post${index}" class="postcard" onmouseover="overfunction('post${index}')" onmouseout="outfunction('post${index}')" onclick="clickfunction('post/index.html?name=${postname}')" style="top: ${top}em;">
             <p>${postname}</p>
         </div>
         `;
+        top += 17;
         $("#post").append(template);
     }
 

@@ -72,7 +72,7 @@
 
         <script src="/editor.md-master/editormd.min.js"></script>
 
-        <link rel="stylesheet" href="/highlight/styles/github-dark.min.css">
+        <link id="code-css" rel="stylesheet" href="/highlight/styles/github-dark.min.css">
         <script src="/highlight/highlight.min.js"></script>
         <script src="/js/highlightjs-line-numbers.js"></script>
         <script src="/highlight/languages/cpp.min.js"></script>
@@ -85,7 +85,7 @@
             $.get(`/md/${post_name}.md`, function(markdown) {
                 testEditormdView = editormd.markdownToHTML("content", {
                     markdown            : markdown ,//+ "\r\n" + $("#append-test").text(),
-                    htmlDecode          : "style,script,iframe",  // you can filter tags decode
+                    htmlDecode          : true,  // you can filter tags decode
                     tocm                : true,    // Using [TOCM]
                     emoji               : true,
                     taskList            : true,

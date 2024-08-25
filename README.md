@@ -1,5 +1,7 @@
 <div align="center">
 
+![](/image/favicon.png)
+
 # laco blog
 
 ![](https://img.shields.io/github/forks/jackzhang2013/temp?style=flat) ![](https://img.shields.io/github/stars/jackzhang2013/temp?style=flat)
@@ -61,25 +63,24 @@ MIT License
     "name":"jackzhang",
     "theme":"light",
     "auto_dark":false,
-    "post":
-    {
-        "count":1,
-        "name":["洛谷P1001题解"]
-    }
+    "code_theme":["github", "github-dark"],
+    "post_name":["洛谷P1001题解"]
 }
 ```
 - name: 博客名
 - theme: 主题，分别是light和dark
 - auto_dark: 自动调整主题
-- post
-    - count: 文章数量
-    - name: 文章名
+- code_theme: 代码主题，见`/highlight/styles/`文件夹
+- post_name: 文章名列表
 
 ### 更新日志
 
 ---
 
-### v1.0.0
+>### v1.0.0
 第一个版本，和之前的beta版相比，更加自动化，并增加了暗黑模式的控制。
+
+>### v1.0.1
+
 
 \>\> 更多请看[CHANGE.md](CHANGE.md)
